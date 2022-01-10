@@ -1,4 +1,4 @@
-module github.com/everpcpc/pixiv
+module github.com/aozora0000/pixiv
 
 go 1.15
 
