@@ -18,6 +18,11 @@ type AppPixivAPI struct {
 	timeout time.Duration
 }
 
+func SetAuth(token string, refresh_token string) {
+	_token = token
+	_refreshToken = refresh_token
+}
+
 func NewApp() *AppPixivAPI {
 	s := sling.New().Base(apiBase).Set("User-Agent", "PixivIOSApp/7.6.2 (iOS 12.2; iPhone9,1)").Set("App-Version", "7.6.2").Set("App-OS-VERSION", "12.2").Set("App-OS", "ios")
 	return &AppPixivAPI{sling: s}
